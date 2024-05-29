@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: be215gsny-java-springboot-gitops
+  description: This is GitOps manifest for be215gsny-java-springboot   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: be215gsny-java-springboot
+    janus-idp.io/tekton: be215gsny-java-springboot 
+    backstage.io/kubernetes-id: be215gsny-java-springboot 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:be215gsny-java-springboot

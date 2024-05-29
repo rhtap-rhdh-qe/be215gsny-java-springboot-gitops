@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: be215gsny-java-springboot-gitops-repository
+spec:
+  url: https://github.com/rhtap-rhdh-qe/be215gsny-java-springboot-gitops
